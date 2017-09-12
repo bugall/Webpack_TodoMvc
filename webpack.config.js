@@ -15,6 +15,7 @@ const cleanOptions = {
 const path = require('path');
 module.exports = {
 	entry: ['webpack-hot-middleware/client', './client/index.js'],
+	//entry: ['react-hot-loader/patch', './client/index.js'],
 	output: {
         path: __dirname + '/dist',
         filename: '[name].[hash:8].js',

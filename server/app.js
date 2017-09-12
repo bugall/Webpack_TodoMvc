@@ -10,7 +10,6 @@ if (process.env.NODE_ENV !== 'production') {
   var webpackConfig = require('../webpack.config.js');
   var webpackCompiled = webpack(webpackConfig);
 
-  console.log(123123)
   // 配置运行时打包
   var webpackDevMiddleware = require('webpack-dev-middleware');
   app.use(webpackDevMiddleware(webpackCompiled, {
