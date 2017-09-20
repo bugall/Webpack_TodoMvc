@@ -1,1 +1,4 @@
-{ "presets": [ "latest", "babel-preset-react" ] }
+{ 
+    "presets": [ "latest", "babel-preset-react" ],
+    "plugins": ["react-hot-loader/babel"]
+}
