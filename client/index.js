@@ -1,23 +1,23 @@
 import React from 'react';  
-import ReactDOM from 'react-dom';  
-import Counter from './Counter';
+import { render }from 'react-dom';  
 import { AppContainer } from 'react-hot-loader'; 
 import {  
+  browserHistory,
   BrowserRouter as Router,
   Route,
-  browserHistory
-} from 'react-router';
+} from 'react-router-dom';
 
+import App from './components/app'
 /**
  * browerHistory  适用history API在浏览器中
  * hashHistory 
  * createMemoryHistory
  * 
 */
-ReactDOM.render(
+render(
     <AppContainer>
-        <Router history={ browserHistory }>
-            <Route path="/" component={App}>
+        <Router>
+            <Route path="/" component={ App }>
                 <Route path="/artlist" component={artlist}></Route>
             </Route>
         </Router>
