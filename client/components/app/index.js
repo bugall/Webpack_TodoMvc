@@ -2,6 +2,7 @@ import Styles from './index.scss'
 import React, { Component } from 'react'
 import Dashboard from '../dashboard'
 import Artlist from '../artlist'
+import Artcontent from '../artcontent'
 
 export default class App extends Component {
     constructor(props) {
@@ -22,6 +23,7 @@ export default class App extends Component {
                     </div>
                     <div className={ Styles.rightMainContent }>
                         <Artlist/>
+                        <Artcontent/>
                     </div>
                 </div>
             </div>
