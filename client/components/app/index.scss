@@ -7,30 +7,63 @@ body{
     background: #f5f7f9; 
     margin: 0px;
 }
-.mainContent {
-    $width: 980px;
-    $float: left;
-    $minHeight: 400px;
-    $sidebarWith: 250px;
+.main {
+    height: 100%;
+    overflow: hidden;
+    $headerHeight: 70px;
+    .headerContent {
+        background: white;
+        height: $headerHeight;
+        width: 100%;
+        position: fixed;
+        .mainContent {
+            width: 980px; 
+            height: auto;
+            margin: 0 auto;
+            input {
+                cursor: pointer;
+                border: none;
+                background: #d3d3d3;
+                max-width: 300px;
+                height: 38px;
+                width: 100px;
+                padding: 0px 10px;
+                color: black;
+                float: right;
+                right: 90px;
+                margin-top: 15px;
+                box-shadow:none;
+                outline: none;
+            }
+        }
+    }
 
-    width: $width;
-    height: auto;
-    background: #fff;
-    margin: 0 auto;
+    .mainContent {
+        $width: 980px;
+        $float: left;
+        $minHeight: 400px;
+        $sidebarWith: 250px;
 
-    .rightMainContent {
-        $leftMargin: 20px;
-        width: $width - $leftMargin - $sidebarWith;
-        margin-left: $leftMargin;
+        width: $width;
         height: auto;
         background: #fff;
-        float: $float;
-        min-height: $minHeight;
-    }
-    .sidebarContent {
-        width: $sidebarWith;
-        float: $float;
-        min-height: $minHeight;
-        background: #f5f7f9;
+        margin: 0 auto;
+        margin-top: $headerHeight + 20;
+
+        .rightMainContent {
+            $leftMargin: 20px;
+            width: $width - $leftMargin - $sidebarWith;
+            margin-left: $leftMargin;
+            height: auto;
+            background: #fff;
+            float: $float;
+            min-height: $minHeight;
+        }
+        .sidebarContent {
+            width: $sidebarWith;
+            float: $float;
+            min-height: $minHeight;
+            background: #f5f7f9;
+        }
     }
 }

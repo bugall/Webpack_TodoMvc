@@ -11,13 +11,7 @@ export default class Dashboard extends Component {
                 <div className={ Styles.brannerContent }>
                     Video++
                 </div>
-                <div className={ Styles.submenuContent }>
-                    <ul>
-                        <li>Home</li>
-                        <li>Article</li>
-                        <li>About</li>
-                    </ul>
-                </div>
+                
                 <div className={ Styles.infoContent }>
                     <div className={ Styles.avatarContent}>
                         <div className={ Styles.avatar }></div>
@@ -38,6 +32,19 @@ export default class Dashboard extends Component {
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div className={ Styles.submenuContent }>
+                    <ul>
+                        <li>Home</li>
+                        <li>Article</li>
+                        <li>About</li>
+                        <li>Home</li>
+                        <li>Article</li>
+                        <li>About</li>
+                        <li>Home</li>
+                        <li>Article</li>
+                        <li>About</li>
+                    </ul>
                 </div>
             </div>
         )
