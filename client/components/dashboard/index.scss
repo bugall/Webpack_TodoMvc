@@ -26,7 +26,7 @@
                 padding: 5px 5px;
                 &:hover {
                     color: white;
-                    background: rgba(127, 132, 134, 0.87) linear-gradient(hsla(0,0%,100%,.2),transparent);
+                    background: #223C48 linear-gradient(hsla(0,0%,100%,.2),transparent);
                     transition-property: background-color;
                     transition-duration: 0.3s;
                     transition-timing-function: ease-in-out;
@@ -52,9 +52,9 @@
             .avatar {
                 background-image: url('./111.jpg');
                 background-size: 100px 100px;
+                box-shadow: -5px 5px 5px #999; 
                 background-position: center;
                 background-repeat:no-repeat;
-                box-shadow: -5px 5px 5px #999;
                 height: inherit;
                 width: 100px;
             }
