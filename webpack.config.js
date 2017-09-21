@@ -12,6 +12,12 @@ const cleanOptions = {
     verbose: true,
     dry: false
 };
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const extractSass = new ExtractTextPlugin({
+    filename: "[name].[contenthash].css",
+    disable: process.env.NODE_ENV === "development"
+});
+
 const path = require('path');
 module.exports = {
 	entry: ['react-hot-loader/patch', 'webpack-hot-middleware/client', './client/index.js'],
@@ -24,16 +30,25 @@ module.exports = {
 	},
 	module: {
 		loaders: [{
-			test: /\.jsx?/,
+            test: /\.scss$/,
+            //loader: 'style-loader!css-loader?modules!sass-loader',
+            //use: extractSass.extract({
+            //    // use style-loader in development
+            //    fallback: "style-loader"
+            //}),
+            loader: 'style-loader!css-loader?modules!sass-loader'            
+            //loader: lessLoader
+        },{
+			test: /\.(js|jsx)/,
 			exclude: /node_modules/,
 			loader: 'babel-loader'
         }, {
-            test: /\.(less|css)$/,
-			exclude: /node_modules/,
-            use: ['style-loader', 'css-loader', 'less-loader']
+            test: /\.(png|jpg|jpeg|gif|svg)/,
+            loader: 'url-loader?limit=100000'
         }]
     },
-    resolve: { },
+    resolve: { 
+    },
     plugins: [new HtmlWebpackPlugin({
         template: `ejs-render-loader!${__dirname}/template.html`,
         inject: 'body',
@@ -43,5 +58,8 @@ module.exports = {
         minChunks: Infinity
     }), new CleanWebpackPlugin(pathsToClean, cleanOptions),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()],
+    new webpack.NoEmitOnErrorsPlugin(),
+    //extractSass],
+    ],
+    devtool: "source-map"
 }

@@ -1,5 +1,6 @@
-import './index.less'
+import Styles from './index.scss'
 import React, { Component } from 'react'
+import Dashboard from '../dashboard'
 
 export default class App extends Component {
     constructor(props) {
@@ -7,7 +8,14 @@ export default class App extends Component {
     }
     render() {
         return (
-            <div>bugall</div>
+            <div className={ Styles.mainContent }>
+                <div className={ Styles.sidebarContent }>
+                    <Dashboard/>
+                </div>
+                <div className={ Styles.rightMainContent }>
+                </div>
+            </div>
+            
         )
     }
 }

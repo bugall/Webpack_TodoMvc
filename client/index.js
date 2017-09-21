@@ -18,7 +18,6 @@ render(
     <AppContainer>
         <Router>
             <Route path="/" component={ App }>
-                <Route path="/artlist" component={artlist}></Route>
             </Route>
         </Router>
     </AppContainer>,

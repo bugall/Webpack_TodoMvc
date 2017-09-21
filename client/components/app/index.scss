@@ -1,0 +1,36 @@
+body{
+    position: relative;
+    font-family: serif;
+    font-size: 14px;
+    line-height: 2;
+    color: #555;
+    background: #f5f7f9; 
+    margin: 0px;
+}
+.mainContent {
+    $width: 980px;
+    $float: left;
+    $minHeight: 400px;
+    $sidebarWith: 250px;
+
+    width: $width;
+    height: auto;
+    background: #fff;
+    margin: 0 auto;
+
+    .rightMainContent {
+        $leftMargin: 20px;
+        width: $width - $leftMargin - $sidebarWith;
+        margin-left: $leftMargin;
+        height: auto;
+        background: #fff;
+        float: $float;
+        min-height: $minHeight;
+    }
+    .sidebarContent {
+        width: $sidebarWith;
+        float: $float;
+        min-height: $minHeight;
+        background: #f5f7f9;
+    }
+}

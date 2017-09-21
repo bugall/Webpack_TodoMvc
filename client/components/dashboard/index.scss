@@ -1,0 +1,108 @@
+.mainContent{
+    width: 100%;
+    height: auto;
+
+    .brannerContent {
+        $height: 100px;
+
+        line-height: $height;
+        font-size: 28px;
+        text-align: center;
+        height: $height;
+        background: black;
+        color: #fff;
+    }
+    .submenuContent {
+        height: auto;
+        background: #fff;
+        margin-top: 20px;
+        ul {
+            margin: 0px;
+            padding: 5px 10px;
+            display: block;
+            li {
+                cursor: pointer;
+                display: block;
+                padding: 5px 5px;
+                &:hover {
+                    background: #999;
+                    color: white;
+                    transition-property: background-color;
+                    transition-duration: 0.2s;
+                    transition-timing-function: ease-in-out;
+                    transition-delay: 0s;
+                }
+            }
+        }
+        
+    }
+    .infoContent {
+        $mainWidth: 250px;
+        background: #fff;
+        height: 200;
+        margin-top: 20px;
+        overflow: hidden;
+
+        .avatarContent {
+            margin: 0px auto;
+            margin-top: 20px;
+            height: 80px;
+            width: 100px;
+            
+            .avatar {
+                background-image: url('./111.jpg');
+                background-size: 100px 100px;
+                background-position: center;
+                background-repeat:no-repeat;
+                box-shadow: -5px 5px 5px #999;
+                height: inherit;
+                width: 100px;
+            }
+        }
+        .userDetail {
+            padding-bottom: 20px;
+            height: auto;
+        }
+        ul {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            display: block;
+            height: auto;
+            overflow: hidden;
+            margin-top: 30px;
+
+            $liWidth: 65px;
+            li {
+                display: block;
+                width: $liWidth;
+                height:50px;
+                float: left;
+                text-align: center;
+                span {
+                    display: block;
+                }
+                span:first-child {
+                    font-size: 18px;
+                    line-height: 36px;
+                    font-weight: 600;
+                }
+                span:last-child {
+                    font-size: 12px;
+                    line-height: 6px;
+                    color: #999;
+                }
+            }
+            li:first-child{
+                margin-right: ($mainWidth - 30 - $liWidth * 3) / 2 - 2;
+                margin-left: 15px;
+                border-right: 2px solid #f5f7f9;
+            }
+            li:last-child {
+                margin-left: ($mainWidth - 30 - $liWidth * 3) / 2 - 2;
+                border-left: 2px solid #f5f7f9;
+                margin-right: 15px;
+            }
+        }
+    }
+}
