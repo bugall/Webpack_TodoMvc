@@ -1,0 +1,28 @@
+.mainContent {
+    $width: 980px;
+    $float: left;
+    $minHeight: 400px;
+    $sidebarWith: 250px;
+
+    width: $width;
+    height: auto;
+    background: #f3f3f3;
+    margin: 0 auto;
+    margin-top: 80px;
+
+    .rightMainContent {
+        $leftMargin: 20px;
+        width: $width - $leftMargin - $sidebarWith;
+        margin-left: $leftMargin;
+        height: auto;
+        background: #fff;
+        float: $float;
+        min-height: $minHeight;
+    }
+    .sidebarContent {
+        width: $sidebarWith;
+        float: $float;
+        min-height: $minHeight;
+        background: #f3f3f3;
+    }
+}

@@ -7,63 +7,10 @@ body{
     background: #f3f3f3; 
     margin: 0px;
 }
+* {
+    box-sizing: border-box;
+} 
 .main {
     height: 100%;
     overflow: hidden;
-    $headerHeight: 70px;
-    .headerContent {
-        background: white;
-        height: $headerHeight;
-        width: 100%;
-        position: fixed;
-        .mainContent {
-            width: 980px; 
-            height: auto;
-            margin: 0 auto;
-            input {
-                cursor: pointer;
-                border: none;
-                background: #f3f3f3;
-                max-width: 300px;
-                height: 38px;
-                width: 100px;
-                padding: 0px 10px;
-                color: black;
-                float: right;
-                right: 90px;
-                margin-top: 15px;
-                box-shadow:none;
-                outline: none;
-            }
-        }
-    }
-
-    .mainContent {
-        $width: 980px;
-        $float: left;
-        $minHeight: 400px;
-        $sidebarWith: 250px;
-
-        width: $width;
-        height: auto;
-        background: #f3f3f3;
-        margin: 0 auto;
-        margin-top: $headerHeight + 20;
-
-        .rightMainContent {
-            $leftMargin: 20px;
-            width: $width - $leftMargin - $sidebarWith;
-            margin-left: $leftMargin;
-            height: auto;
-            background: #fff;
-            float: $float;
-            min-height: $minHeight;
-        }
-        .sidebarContent {
-            width: $sidebarWith;
-            float: $float;
-            min-height: $minHeight;
-            background: #f3f3f3;
-        }
-    }
 }

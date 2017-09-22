@@ -35,15 +35,16 @@ export default class Dashboard extends Component {
                 </div>
                 <div className={ Styles.submenuContent }>
                     <ul>
-                        <li>Home</li>
-                        <li>Article</li>
-                        <li>About</li>
-                        <li>Home</li>
-                        <li>Article</li>
-                        <li>About</li>
-                        <li>Home</li>
-                        <li>Article</li>
-                        <li>About</li>
+                        <li><div className={ Styles.node }></div>Node.js</li>
+                        <li><div className={ Styles.mongo }></div>MongoDB</li>
+                        <li><div className={ Styles.mysql }></div>Mysql</li>
+                        <li><div className={ Styles.redis }></div>Redis</li>
+                        <li><div className={ Styles.linux }></div>Linux</li>
+                        <li><div className={ Styles.network }></div>Network</li>
+                        <li><div className={ Styles.html }></div>Html</li>
+                        <li><div className={ Styles.css }></div>Css</li>
+                        <li><div className={ Styles.docker }></div>Docker</li>
+                        <li><div className={ Styles.react }></div>React</li>
                     </ul>
                 </div>
             </div>

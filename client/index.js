@@ -5,9 +5,12 @@ import {
   browserHistory,
   BrowserRouter as Router,
   Route,
+  HashRouter,
+  hashHistory
 } from 'react-router-dom';
 
 import App from './components/app'
+import Index from './components/index'
 /**
  * browerHistory  适用history API在浏览器中
  * hashHistory 
@@ -16,10 +19,11 @@ import App from './components/app'
 */
 render(
     <AppContainer>
-        <Router>
-            <Route path="/" component={ App }>
-            </Route>
-        </Router>
+        <HashRouter history={hashHistory}>
+            <App>
+                <Route exact path="/" component={ Index }/>
+            </App>
+        </HashRouter>
     </AppContainer>,
     document.getElementById('app')
 );

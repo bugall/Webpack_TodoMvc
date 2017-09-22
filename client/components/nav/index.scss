@@ -1,0 +1,28 @@
+.headerContent {
+    background: white;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 2px 15px grey;
+
+    .mainContent {
+        width: 980px; 
+        height: auto;
+        margin: 0 auto;
+        input {
+            cursor: pointer;
+            border: none;
+            background: #f3f3f3;
+            max-width: 300px;
+            height: 38px;
+            width: 100px;
+            padding: 0px 10px;
+            color: black;
+            float: right;
+            right: 90px;
+            margin-top: 10px;
+            box-shadow:none;
+            outline: none;
+        }
+    }
+}
